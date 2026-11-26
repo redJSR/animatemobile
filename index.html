@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe Animate Mobile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HOME SCREEN (Matches IMG_3369 + IMG_2960_2) -->
+  <div id="homeView" style="display:flex; flex-direction:column; height:100vh;">
+    <header class="top-header">
+      <div class="header-left">
+        <div class="app-badge" title="Adobe Animate">
+          <img src="Untitled306_20261125184115.png" alt="An" onerror="this.style.display='none'; this.parentElement.textContent='An';" />
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" title="Creative Cloud Sync">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+        </button>
+        <div class="avatar-circle">A</div>
+      </div>
+    </header>
+
+    <div class="home-layout">
+      <aside class="home-sidebar">
+        <div>
+          <div class="nav-group">
+            <button class="nav-item active">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              Home
+            </button>
+            <button class="nav-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+              Learn
+            </button>
+          </div>
+
+          <div class="nav-section-label">FILES</div>
+          <div class="nav-group">
+            <button class="nav-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+              Your files
+            </button>
+            <button class="nav-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              Shared with you
+            </button>
+            <button class="nav-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+              Deleted
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar-bottom">
+          <button class="btn-create-new" id="openModalBtn">
+            <span class="plus-circle">+</span>
+            Create new
+          </button>
+          <button class="btn-import">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Import and open
+          </button>
+        </div>
+      </aside>
+
+      <main class="home-main">
+        <div class="hero-grid">
+          <div class="hero-card primary">
+            <h2>Get started on iPad</h2>
+            <p>Animate has evolved to support touch and the Apple Pencil. Scrub your timeline, draw crisp vectors, and build classic tweens anywhere.</p>
+            <a class="hero-link" onclick="openEditor('Welcome Tutorial.fla', 1920, 1080)">Learn now</a>
+            <div class="hero-art-timeline">
+              <div class="mini-stage"><div class="mini-bouncing-ball"></div></div>
+              <div class="mini-frames">
+                <span class="key"></span><span></span><span></span><span class="key"></span>
+                <span></span><span></span><span class="key"></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card secondary">
+            <div class="feature-badge-icon">An</div>
+            <h2>New and upcoming features</h2>
+            <a class="hero-link">View</a>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h3>Recent</h3>
+        </div>
+
+        <div class="recent-grid">
+          <div class="file-card" onclick="openEditor('Animate Looking.fla', 1920, 1080)">
+            <div class="file-thumb">
+              <span class="fla-pill">FLA</span>
+              <div class="stage-preview wide">Animate Looking</div>
+              <span class="sync-dot">✓</span>
+            </div>
+            <div class="file-meta">
+              <div>
+                <div class="file-title">Animate Looking.fla</div>
+                <div class="file-date">13 minutes ago • 46.9 MB</div>
+              </div>
+              <span class="file-more">•••</span>
+            </div>
+          </div>
+
+          <div class="file-card" onclick="openEditor('Animation Cheese.fla', 1920, 1080)">
+            <div class="file-thumb">
+              <span class="fla-pill">FLA</span>
+              <div class="stage-preview">Animation Cheese</div>
+              <span class="sync-dot">✓</span>
+            </div>
+            <div class="file-meta">
+              <div>
+                <div class="file-title">Animation Cheese.fla</div>
+                <div class="file-date">8 days ago • 701 KB</div>
+              </div>
+              <span class="file-more">•••</span>
+            </div>
+          </div>
+
+          <div class="file-card" onclick="openEditor('Standing Full Cam.fla', 1080, 1080)">
+            <div class="file-thumb">
+              <span class="fla-pill">FLA</span>
+              <div class="stage-preview">Standing Full Cam</div>
+              <span class="sync-dot">✓</span>
+            </div>
+            <div class="file-meta">
+              <div>
+                <div class="file-title">Standing Full Cam.fla</div>
+                <div class="file-date">8 days ago • 53 KB</div>
+              </div>
+              <span class="file-more">•••</span>
+            </div>
+          </div>
+
+          <div class="file-card" onclick="openEditor('Offset Drag Animation.fla', 1280, 720)">
+            <div class="file-thumb">
+              <span class="fla-pill">FLA</span>
+              <div class="stage-preview wide">Offset Drag</div>
+              <span class="sync-dot">✓</span>
+            </div>
+            <div class="file-meta">
+              <div>
+                <div class="file-title">Offset Drag Animation.fla</div>
+                <div class="file-date">18 days ago • 2.6 MB</div>
+              </div>
+              <span class="file-more">•••</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- NEW CANVAS MODAL (Matches IMG_3370) -->
+  <div id="newCanvasModal" class="modal-backdrop hidden">
+    <div class="new-canvas-modal">
+      <div class="modal-presets-pane">
+        <div class="preset-tabs">
+          <button class="preset-tab" onclick="switchTab(this, 'recent')">Recent</button>
+          <button class="preset-tab active" onclick="switchTab(this, 'character')">Character Animation</button>
+          <button class="preset-tab" onclick="switchTab(this, 'social')">Social</button>
+        </div>
+
+        <div class="preset-grid" id="presetGrid">
+          <div class="preset-item selected" onclick="selectPreset(this, 1920, 1080, 24)">
+            <div class="preset-icon">▶</div>
+            <div class="preset-name">Full HD</div>
+            <div class="preset-dims">1920 x 1080 px</div>
+          </div>
+          <div class="preset-item" onclick="selectPreset(this, 1280, 720, 24)">
+            <div class="preset-icon">HD</div>
+            <div class="preset-name">HD</div>
+            <div class="preset-dims">1280 x 720 px</div>
+          </div>
+          <div class="preset-item" onclick="selectPreset(this, 1080, 1080, 24)">
+            <div class="preset-icon">□</div>
+            <div class="preset-name">Square</div>
+            <div class="preset-dims">1080 x 1080 px</div>
+          </div>
+          <div class="preset-item" onclick="selectPreset(this, 1080, 1920, 30)">
+            <div class="preset-icon">📱</div>
+            <div class="preset-name">Mobile Story</div>
+            <div class="preset-dims">1080 x 1920 px</div>
+          </div>
+          <div class="preset-item" onclick="selectPreset(this, 2048, 1536, 24)">
+            <div class="preset-icon">iPad</div>
+            <div class="preset-name">iPad Stage</div>
+            <div class="preset-dims">2048 x 1536 px</div>
+          </div>
+          <div class="preset-item" onclick="selectPreset(this, 800, 600, 24)">
+            <div class="preset-icon">AS3</div>
+            <div class="preset-name">Classic Canvas</div>
+            <div class="preset-dims">800 x 600 px</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-drawer">
+        <div>
+          <div class="drawer-header">
+            <h3>New canvas</h3>
+            <button class="icon-btn" id="closeModalBtn">✕</button>
+          </div>
+          <input type="text" id="docNameInput" class="drawer-title-input" value="Untitled-1" />
+
+          <div class="drawer-row">
+            <span>Units</span>
+            <select class="drawer-select">
+              <option>Pixels</option>
+            </select>
+          </div>
+          <div class="drawer-row">
+            <span>W</span>
+            <input type="number" id="widthInput" class="drawer-num" value="1920" />
+          </div>
+          <div class="drawer-row">
+            <span>H</span>
+            <input type="number" id="heightInput" class="drawer-num" value="1080" />
+          </div>
+          <div class="drawer-row">
+            <span>Orientation</span>
+            <div class="orientation-btns">
+              <button class="orient-btn" id="portraitBtn" title="Portrait">▯</button>
+              <button class="orient-btn active" id="landscapeBtn" title="Landscape">▭</button>
+            </div>
+          </div>
+          <div class="drawer-row">
+            <span>Frame Rate</span>
+            <div style="display:flex; align-items:center; gap:6px; width:125px;">
+              <input type="number" id="fpsInput" class="drawer-num" style="width:65px;" value="24" />
+              <span style="font-size:12px;">fps</span>
+            </div>
+          </div>
+
+          <hr class="drawer-divider" />
+
+          <div style="font-size:13px; color:var(--text-secondary);">Stage color</div>
+          <div class="stage-color-row">
+            <select id="stageColorSelect" class="drawer-select" style="flex:1;">
+              <option value="#ffffff">White</option>
+              <option value="#000000">Black</option>
+              <option value="transparent">Transparent</option>
+            </select>
+            <div id="stageSwatchPreview" class="stage-swatch"></div>
+          </div>
+
+          <hr class="drawer-divider" />
+
+          <div style="font-size:13px; color:var(--text-secondary); margin-bottom:6px;">Platform Type</div>
+          <div style="font-size:13px; color:var(--text-primary);">ActionScript 3.0 &nbsp; HTML5 Canvas</div>
+        </div>
+
+        <div class="drawer-actions">
+          <button class="btn-pill-cancel" id="cancelModalBtn">Cancel</button>
+          <button class="btn-pill-create" id="createDocBtn">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKSPACE EDITOR (Matches IMG_3371 + Animate Tools & Timeline) -->
+  <div id="editorView" class="editor-layout hidden">
+    <div class="editor-topbar">
+      <div class="header-left">
+        <button class="icon-btn" id="backHomeBtn" title="Home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </button>
+      </div>
+      <div class="doc-title-group">
+        <span id="activeDocTitle">Untitled-1.fla ▾</span>
+        <span class="zoom-pill">100%</span>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" title="Undo">↶</button>
+        <button class="icon-btn" title="Redo">↷</button>
+        <button class="btn-share">Export</button>
+      </div>
+    </div>
+
+    <div class="editor-body">
+      <div class="tool-rail-left">
+        <button class="tool-btn active" title="Selection Tool (V)">➤</button>
+        <button class="tool-btn" title="Subselection Tool (A)">▷</button>
+        <button class="tool-btn" title="Free Transform (Q)">⬚</button>
+        <button class="tool-btn" title="Lasso (L)">◌</button>
+        <button class="tool-btn" title="Fluid Brush (B)">✎</button>
+        <button class="tool-btn" title="Eraser (E)">⌫</button>
+        <button class="tool-btn" title="Rectangle / Oval (R)">▢</button>
+        <button class="tool-btn" title="Paint Bucket (K)">🪣</button>
+        <button class="tool-btn" title="Text Tool (T)">T</button>
+        <button class="tool-btn" title="Eyedropper (I)">💉</button>
+        <div class="color-well">
+          <div class="swatch-stroke" title="Stroke Color"></div>
+          <div class="swatch-fill" title="Fill Color"></div>
+        </div>
+      </div>
+
+      <div class="stage-viewport">
+        <div class="animate-stage" id="animateStage"></div>
+        <div class="floating-layer-chip">
+          <span style="font-size:11px; color:#ccc;">+</span>
+          <div class="layer-thumb-box"></div>
+        </div>
+      </div>
+
+      <div class="tool-rail-right">
+        <button class="tool-btn active" title="Properties">☰</button>
+        <button class="tool-btn" title="Library">📚</button>
+        <button class="tool-btn" title="Color & Swatches">🎨</button>
+        <button class="tool-btn" title="Align">⊞</button>
+        <button class="tool-btn" title="Frame Actions">{ }</button>
+      </div>
+    </div>
+
+    <div class="timeline-dock">
+      <div class="timeline-toolbar">
+        <div class="timeline-controls">
+          <button class="icon-btn" id="playBtn" title="Play / Pause">▶</button>
+          <button class="icon-btn" id="addKeyframeBtn" title="Insert Keyframe (F6)">+ Keyframe</button>
+          <button class="icon-btn" id="onionSkinBtn" title="Onion Skin">◎ Onion</button>
+        </div>
+        <span id="frameReadout">Frame 1 &nbsp;|&nbsp; 24.0 fps &nbsp;|&nbsp; 0.0s</span>
+      </div>
+      <div class="timeline-tracks">
+        <div class="layer-col">
+          <span>Layer_1</span>
+          <span style="color:#888;">👁 🔒</span>
+        </div>
+        <div class="frames-grid" id="framesGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const homeView = document.getElementById('homeView');
+    const editorView = document.getElementById('editorView');
+    const newCanvasModal = document.getElementById('newCanvasModal');
+    const widthInput = document.getElementById('widthInput');
+    const heightInput = document.getElementById('heightInput');
+    const stageColorSelect = document.getElementById('stageColorSelect');
+    const stageSwatchPreview = document.getElementById('stageSwatchPreview');
+    const animateStage = document.getElementById('animateStage');
+    const framesGrid = document.getElementById('framesGrid');
+    const frameReadout = document.getElementById('frameReadout');
+
+    let currentFrame = 1;
+    let totalFrames = 36;
+    let keyframes = new Set([1, 10, 20]);
+    let playing = null;
+
+    document.getElementById('openModalBtn').onclick = () => newCanvasModal.classList.remove('hidden');
+    document.getElementById('closeModalBtn').onclick = () => newCanvasModal.classList.add('hidden');
+    document.getElementById('cancelModalBtn').onclick = () => newCanvasModal.classList.add('hidden');
+
+    stageColorSelect.onchange = () => {
+      const val = stageColorSelect.value;
+      stageSwatchPreview.style.background = val === 'transparent'
+        ? 'repeating-conic-gradient(#ccc 0% 25%, #fff 0% 50%) 50% / 10px 10px'
+        : val;
+    };
+
+    function selectPreset(el, w, h, fps) {
+      document.querySelectorAll('.preset-item').forEach(i => i.classList.remove('selected'));
+      el.classList.add('selected');
+      widthInput.value = w;
+      heightInput.value = h;
+      document.getElementById('fpsInput').value = fps;
+    }
+
+    function openEditor(title, w, h, bg = '#ffffff') {
+      newCanvasModal.classList.add('hidden');
+      homeView.classList.add('hidden');
+      editorView.classList.remove('hidden');
+      document.getElementById('activeDocTitle').textContent = `${title} ▾`;
+
+      const scale = Math.min(680 / w, 380 / h);
+      animateStage.style.width = `${Math.round(w * scale)}px`;
+      animateStage.style.height = `${Math.round(h * scale)}px`;
+      animateStage.style.background = bg === 'transparent'
+        ? 'repeating-conic-gradient(#d8d8d8 0% 25%, #ffffff 0% 50%) 50% / 16px 16px'
+        : bg;
+      renderTimeline();
+    }
+
+    document.getElementById('createDocBtn').onclick = () => {
+      const name = document.getElementById('docNameInput').value.trim() || 'Untitled-1';
+      const w = parseInt(widthInput.value, 10) || 1920;
+      const h = parseInt(heightInput.value, 10) || 1080;
+      openEditor(`${name}.fla`, w, h, stageColorSelect.value);
+    };
+
+    document.getElementById('backHomeBtn').onclick = () => {
+      clearInterval(playing);
+      playing = null;
+      editorView.classList.add('hidden');
+      homeView.classList.remove('hidden');
+    };
+
+    function renderTimeline() {
+      framesGrid.innerHTML = '';
+      for (let i = 1; i <= totalFrames; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'frame-cell' +
+          (i === currentFrame ? ' active' : '') +
+          (keyframes.has(i) ? ' keyframe' : '');
+        cell.onclick = () => {
+          currentFrame = i;
+          renderTimeline();
+        };
+        framesGrid.appendChild(cell);
+      }
+      const fps = parseFloat(document.getElementById('fpsInput').value) || 24;
+      frameReadout.textContent = `Frame ${currentFrame}  |  ${fps.toFixed(1)} fps  |  ${((currentFrame - 1) / fps).toFixed(1)}s`;
+    }
+
+    document.getElementById('addKeyframeBtn').onclick = () => {
+      keyframes.add(currentFrame);
+      renderTimeline();
+    };
+
+    document.getElementById('playBtn').onclick = (e) => {
+      if (playing) {
+        clearInterval(playing);
+        playing = null;
+        e.target.textContent = '▶';
+      } else {
+        e.target.textContent = '⏸';
+        const fps = parseFloat(document.getElementById('fpsInput').value) || 24;
+        playing = setInterval(() => {
+          currentFrame = currentFrame >= totalFrames ? 1 : currentFrame + 1;
+          renderTimeline();
+        }, 1000 / fps);
+      }
+    };
+  </script>
+</body>
+</html>
